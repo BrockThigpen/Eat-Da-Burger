@@ -19,8 +19,7 @@ $(function () {
     $('create').on('submit', function (event) {
         event.preventDefault();
         let newBurger = {
-            name: $('#bg').val().trim(),
-            eaten: $('[name=eaten]:checked').val().trim()
+            name: $('#bg').val().trim()
         };
         $.ajax('/api/burgers', {
             type: 'POST',
