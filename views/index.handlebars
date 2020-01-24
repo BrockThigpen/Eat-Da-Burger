@@ -1,38 +1,38 @@
-<h1>Cats!</h1>
+<img src="/assets/images/burger.png">
 
-<h2>Cats that are not sleepy!</h2>
-
-<ul>
-  {{#each cats}}
-    {{#unless sleepy}}
-      {{> cats/cat-block sleep=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Cats that are sleepy!</h2>
-
-<ul>
-  {{#each cats}}
-    {{#if sleepy}}
-      {{> cats/cat-block sleep=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a Cat</h2>
+<h1 class="mt-4">Eat-Da-Burger!</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-5">
+      <ul id='notEatenList'>
+        {{#each burgers}}
+        {{#unless eaten}}
+        <li>
+          <div class="notEaten" data-id="{{id}}">{{id}}. {{name}}</div>
+          <button class='btn btn-light eat' id='devourBtn' data-id="{{id}}">Devour It</button>
+        </li>
+        {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+    <div class="col-5">
+      <ul id='eatenList'>
+        {{#each burgers}}
+        {{#if eaten}}
+        <li>
+          <div class="eaten" data-id="{{id}}">{{id}}. {{name}}</div>
+        </li>
+        {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>
 <form class="create-form">
 
   <div class="form-group">
-    <label for="ca">Cat Name:</label>
-    <input type="text" id="ca" name="name">
+    <textarea id="bg" name="name"></textarea>
   </div>
-
-  <div class="form-group">
-    <label for="sleepy">Sleepy?</label><br>
-    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-    <input type="radio" name="sleepy" value="0"> Awake
-  </div>
-
-  <button type="submit">Add Cat</button>
+  <button type="submit" id='bgSub' class="btn-primary">Submit</button>
+  <p class="mt-4">Enter a burger you want to eat Click the "Submit" button.</p>
 </form>
