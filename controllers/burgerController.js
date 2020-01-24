@@ -13,16 +13,16 @@ router.get('/', (req, res) => {
 
 router.post('/api/burgers', (req, res) => {
     burger.insert([
-        'name', 'eaten'
+        'name'
     ], [
-        req.body.name, req.body.eaten
+        req.body.name
     ], result => {
         res.json({ id: result.insertId });
     });
 });
 
 router.put('/api/burgers/:id', (req, res) => {
-    let condition = `id = ${req.params.id}`;
+    let condition = 'id = ' + req.params.id;
     burger.update({
         eaten: req.body.eaten
     }, condition, result => {
