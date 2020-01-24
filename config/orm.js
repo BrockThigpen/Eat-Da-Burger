@@ -24,7 +24,8 @@ const sqlTranslate = obj => {
 
 const orm = {
     all: (table, cb) => {
-        connection.query('SELECT * FORM ?', [table], (err, res) => {
+        let queryStr = 'SELECT * FROM ' + table + ';';
+        connection.query(queryStr, (err, res) => {
             if (err) throw err;
             cb(res);
         });
