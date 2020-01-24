@@ -1,10 +1,9 @@
 $(function () {
 
-    $('.eaten').on('click', function (event) {
+    $('.eat').on('click', function (event) {
         let id = $(this).data('id');
-        let nowEaten = $(this).data('nowEaten');
         let eatenState = {
-            eaten: nowEaten
+            eaten: true
         };
         $.ajax('/api/burgers/' + id, {
             type: 'PUT',
@@ -16,7 +15,7 @@ $(function () {
         );
     });
 
-    $('create').on('submit', function (event) {
+    $('#bgSub').on('click', function (event) {
         event.preventDefault();
         let newBurger = {
             name: $('#bg').val().trim()
