@@ -48,7 +48,7 @@ const orm = {
         let queryStr = 'UPDATE ' + table +
             ' SET ' +
             sqlTranslate(colVals) +
-            'WHERE ' +
+            ' WHERE ' +
             condition;
 
         connection.query(queryStr, (err, res) => {
