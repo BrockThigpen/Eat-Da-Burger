@@ -7,10 +7,10 @@
       <ul id='notEatenList'>
         {{#each burgers}}
         {{#unless eaten}}
-        <li>
-          <div class="notEaten" data-id="{{id}}">{{id}}. {{name}}</div>
-          <button class='btn btn-light eat' id='devourBtn' data-id="{{id}}">Devour It</button>
+        <li class="notEaten" data-id="{{id}}">
+          {{id}}. {{name}}
         </li>
+        <button class="btn btn-light" id='devourBtn' data-id="{{id}}">Devour It</button>
         {{/unless}}
         {{/each}}
       </ul>
@@ -19,8 +19,8 @@
       <ul id='eatenList'>
         {{#each burgers}}
         {{#if eaten}}
-        <li>
-          <div class="eaten" data-id="{{id}}">{{id}}. {{name}}</div>
+        <li class="eaten" data-id="{{id}}">
+          {{id}}. {{name}}
         </li>
         {{/if}}
         {{/each}}

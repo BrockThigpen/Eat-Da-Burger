@@ -15,17 +15,12 @@ li{
     padding: 10px;
 }
 .notEaten{
-    padding: 10px;
-}
-#devourBtn{
-    float: right;
-    display: inline-block;
+    padding: 10px;  
+    display: inline-block; 
+    width: 70%;
 }
 .eaten{
     color: darkgray;
-}
-#bgSub{
-
 }
 #bg{
     padding-top: 20px;
