@@ -2,7 +2,7 @@
 
 <a href='https://damp-waters-15249.herokuapp.com/'>Veiw deployed app here.</a>
 
-![image](https://raw.githubusercontent.com/BrockThigpen/Eat-Da-Burger/master/assets/images/demo.png)
+![image](https://raw.githubusercontent.com/BrockThigpen/Eat-Da-Burger/master/public/assets/images/demo.png)
 
 This is a fun express application that utilizes a MySQL database, and is deployed through heroku.
 
